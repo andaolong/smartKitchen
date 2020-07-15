@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">智慧厨房</string>
+    <string name="app_name">smartKitchen</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="string_myRefrigerator">我的冰箱</string>
+    <string name="string_myPot">我的锅子</string>
+    <string name="todo">TODO</string>
 </resources>
