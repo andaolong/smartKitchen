@@ -27,9 +27,9 @@
         android:layout_height="200dp"
         android:layout_marginTop="60dp"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="120dp">
 
         <ImageView
@@ -73,8 +73,8 @@
             android:id="@+id/myInformationLabel"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:gravity="center|bottom"
             android:background="#EEEEEE"
+            android:gravity="center|bottom"
             android:text="我的信息"
             android:textSize="24dp"
             app:layout_constraintBottom_toTopOf="@+id/horizontalLine01"
@@ -87,57 +87,57 @@
             android:layout_width="300dp"
             android:layout_height="1dp"
             android:background="#898989"
-            app:layout_constraintTop_toBottomOf="@id/myInformationLabel"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/myInformationLabel" />
 
         <Button
             android:id="@+id/feedbackLabel"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:lineHeight="60dp"
-            android:text="反馈不足"
             android:background="#EEEEEE"
             android:gravity="center_horizontal|bottom"
+            android:lineHeight="60dp"
+            android:text="反馈不足"
             android:textSize="24dp"
             app:layout_constraintBottom_toTopOf="@id/horizontalLine02"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/horizontalLine01" />
+
         <TextView
             android:id="@+id/horizontalLine02"
             android:layout_width="300dp"
             android:layout_height="1dp"
             android:background="#898989"
-            app:layout_constraintTop_toBottomOf="@id/feedbackLabel"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/feedbackLabel" />
+
         <Button
             android:id="@+id/aboutUsLabel"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:background="#EEEEEE"
+            android:gravity="center|bottom"
             android:lineHeight="50dp"
             android:text="关于我们"
-            android:gravity="center|bottom"
-            android:background="#EEEEEE"
             android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalLine02" />
+
         <TextView
             android:id="@+id/horizontalLine03"
             android:layout_width="300dp"
             android:layout_height="1dp"
             android:background="#898989"
-            app:layout_constraintTop_toBottomOf="@id/aboutUsLabel"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/aboutUsLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

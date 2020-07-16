@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/backgroundimg1">
 
     <!--自带的TextView-->
     <!--    <TextView-->
@@ -22,13 +23,14 @@
     <!--        app:layout_constraintTop_toTopOf="parent"-->
     <!--        android:gravity="center_horizontal" />-->
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/myRefrigerator"
         android:layout_width="140dp"
         android:layout_height="180dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="60dp"
-        android:background="#DFDFDF"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/myPot"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -53,6 +55,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="@string/string_myRefrigerator"
+            android:textColor="#000000"
             android:textAlignment="center"
             android:textFontWeight="@android:integer/config_mediumAnimTime"
             android:textSize="16dp"
@@ -69,7 +72,7 @@
         android:layout_height="180dp"
         android:layout_marginTop="60dp"
         android:layout_marginRight="70dp"
-        android:background="#DFDFDF"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -95,6 +98,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="@string/string_myPot"
+            android:textColor="#000000"
             android:textAlignment="center"
             android:textFontWeight="@android:integer/config_mediumAnimTime"
             android:textSize="16dp"
