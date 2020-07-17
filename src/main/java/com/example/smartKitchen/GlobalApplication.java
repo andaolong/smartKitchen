@@ -4,7 +4,7 @@ package com.example.smartKitchen;
 import android.app.Application;
 
 
-//设置一个全局的类用来传递信息
+//设置一个全局的类用来传递信息,好像没有用
 public class GlobalApplication extends Application {
     public String httpGetMessage;
 

@@ -72,6 +72,7 @@ public class DeviceController {
 
 
 
+
             String json_str = msg.obj.toString();
             Log.d("handler", json_str);
             try {
