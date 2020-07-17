@@ -1,19 +1,15 @@
 package com.example.smartKitchen.huaweiHttp;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.widget.ImageButton;
-import android.widget.Switch;
 
 import androidx.annotation.NonNull;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /*
@@ -26,6 +22,7 @@ public class DeviceController {
     public static int opt;
     final public static int GET_SHADOW = 0;
     final public static int ISSUE_COMMAND = 1;
+    public static Bundle b= new Bundle();
 
     public DeviceController(String project_id, String device_id) {
         super();
@@ -71,35 +68,58 @@ public class DeviceController {
         httpClient.doPost(url, content);
     }
 
+    @SuppressLint("HandlerLeak")
     public static Handler handler = new Handler() {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
-            String json_str = msg.obj.toString();
-            Log.d("handler", json_str);
-            try {
-                JSONObject jsonObject = new JSONObject(json_str);
-//                String cmd = jsonObject.getString("cmd");
-//                String code = jsonObject.getString("code");
-//                //用户名密码保存到shared preference
-//                SharedPreferences sp = context.getSharedPreferences("user", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sp.edit();
-//                String username;
-//                String password;
-                //返回成功通过opt判断各种操作
-                switch (opt) {
-                    case GET_SHADOW:
-                        //解析json
-//                        String temp = jsonObject.getJSONArray("shadow").getJSONObject(0).getJSONObject("reported").getJSONObject("properties").getString("Temperature");
-//                        System.out.println(temp);
+//            String json_str = msg.obj.toString();
+//            Log.d("handler", json_str);
+
+            switch (opt) {
+                case GET_SHADOW:
+                    //解析json
+                    try {
+                        String json_str = msg.obj.toString();
+                        Log.d("handler", json_str);
+                        JSONObject jsonObject = new JSONObject(json_str);
+                        //取出device_id
+                        String device_id = jsonObject.getString("device_id");
+                        System.out.println("\n第一层的device_id:" + device_id);
+                        //取出整个shadow，现在还是一个json数组
+                        JSONArray jsonArrayShadow = jsonObject.getJSONArray("shadow");
+                        System.out.println("\n第一层的shadow:" + jsonArrayShadow);
+                        //从shadow这个json数组中取出service_id,reported数组，我们要的信息在report数组里面
+                        for (int i = 0; i < jsonArrayShadow.length(); i++) {
+                            //新建一个jsonObject存储json数组中解析出来的json对象
+                            JSONObject jsonObject02 = (JSONObject) jsonArrayShadow.get(i);
+                            //解析出service_id
+                            String service_id = jsonObject02.getString("service_id");
+                            System.out.println("第二层的service_id:" + service_id);
+                            //解析出report
+                            JSONObject reportedJson = jsonObject02.getJSONObject("reported");
+                            System.out.println("第二层的reported:" + reportedJson);
+                            //从report中解析出properties
+                            JSONObject propertiesJson = reportedJson.getJSONObject("properties");
+                            System.out.println("第三层的properties:" + propertiesJson);
+                            //从properties中解析出温度，食物等我们需要的信息
+                            String Temperature = propertiesJson.getString("Temperature");
+                            String AllFood = propertiesJson.getString("AllFood");
+                            String MainFood = propertiesJson.getString("MainFood");
+                            System.out.println("第四层的Temperature:" + Temperature);
+                            System.out.println("第四层的AllFood:" + AllFood);
+                            System.out.println("第四层的MainFood:" + MainFood);
+                            System.out.println("解析完成");
+                            b.putString("httpInfo",json_str);
+                        }
                         break;
-                    case ISSUE_COMMAND:
-                        break;
-                }
-//                }
-            } catch (JSONException e) {
-                e.printStackTrace();
+//                        case ISSUE_COMMAND:
+//                            break;
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
             }
+
         }
     };
 }
