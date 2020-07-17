@@ -9,9 +9,8 @@ public class Query {
 //        System.out.println(httpClient.doPost(url,content));
 
         //查询设备影子
-        Device device = new Device("08f56a11b38025802f99c01e5292c354","5f056b6969c46102cb1986e0_20200714");
-        System.out.println(device.getShadow());
-
+        DeviceController deviceController = new DeviceController("08f56a11b38025802f99c01e5292c354","5f056b6969c46102cb1986e0_20200714");
+        deviceController.getShadow();
 
         //解析json
 

@@ -4,12 +4,12 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/icon_mydevice_unselected"
-        android:title="我的设备" />
+        android:title="厨房" />
 
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/icon_recipe_unselected"
-        android:title="菜谱推荐" />
+        android:title="吃什么" />
 
     <item
         android:id="@+id/navigation_notifications"

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.smartKitchen.R;
 import com.example.smartKitchen.myRefrigeratorFoods;
+import com.example.smartKitchen.myPot;
 
 public class HomeFragment extends Fragment {
 
@@ -48,7 +49,7 @@ public class HomeFragment extends Fragment {
         myPot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), com.example.smartKitchen.myPot.class);
+                Intent intent = new Intent(getActivity(), myPot.class);
                 startActivity(intent);
             }
         });
