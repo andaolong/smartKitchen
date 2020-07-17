@@ -43,19 +43,19 @@ public class DeviceController {
         HttpClient httpClient = new HttpClient();
         httpClient.doGet(url);
     }
-//    public String issueCommand(String command_name, String parameter, String value){
-//        this.url = this.url+"/v5/iot/"+this.project_id+"/devices/"+this.device_id+"/commands";
-//        String content =
-//                "{\n" +
-//                "  \"service_id\" : \"Refrigerator\",\n" +
-//                "  \"command_name\" : \""+command_name+"\",\n" +
-//                "  \"paras\" : {\n" +
-//                "    \""+parameter+"\" : \""+value+"\"\n" +
-//                "  }\n" +
-//                "}\n";
-//        HttpClient httpClient = new HttpClient();
-//        return httpClient.doPost(url,content);
-//    }
+    public void issueCommand(String command_name, String parameter, String value){
+        this.url = this.url+"/v5/iot/"+this.project_id+"/devices/"+this.device_id+"/commands";
+        String content =
+                "{\n" +
+                "  \"service_id\" : \"Refrigerator\",\n" +
+                "  \"command_name\" : \""+command_name+"\",\n" +
+                "  \"paras\" : {\n" +
+                "    \""+parameter+"\" : \""+value+"\"\n" +
+                "  }\n" +
+                "}\n";
+        HttpClient httpClient = new HttpClient();
+        httpClient.doPost(url,content);
+    }
 
     public static Handler handler = new Handler() {
         @Override
