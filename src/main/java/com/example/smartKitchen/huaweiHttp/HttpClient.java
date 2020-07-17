@@ -62,6 +62,7 @@ public class HttpClient {
                         //call back method
                         Message message = new Message();
                         message.obj=result;
+
                         Looper.prepare();//新线程中调用handler必须用looper包裹
                         DeviceController.handler.handleMessage(message);
                         Looper.loop();
