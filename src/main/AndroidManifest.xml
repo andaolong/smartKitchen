@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GainMuscleActivity"></activity>
+        <activity android:name=".SmartActivity"></activity>
+        <activity android:name=".GainMuscleActivity" />
         <activity android:name=".ShapingActivity" />
         <activity android:name=".LoseWeightActivity" />
         <activity android:name=".myPot" />

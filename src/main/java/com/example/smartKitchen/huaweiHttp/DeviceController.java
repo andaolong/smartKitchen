@@ -111,6 +111,10 @@ public class DeviceController {
                             System.out.println("第四层的MainFood:" + MainFood);
                             System.out.println("解析完成");
                             b.putString("httpInfo",json_str);
+                            b.putString("service_id",service_id);
+                            b.putString("Temperature",Temperature);
+                            b.putString("AllFood",AllFood);
+                            b.putString("MainFood",MainFood);
                         }
                         break;
 //                        case ISSUE_COMMAND:
