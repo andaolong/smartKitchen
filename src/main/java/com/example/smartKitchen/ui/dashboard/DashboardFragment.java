@@ -1,18 +1,19 @@
 package com.example.smartKitchen.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
+import com.example.smartKitchen.GainMuscleActivity;
+import com.example.smartKitchen.LoseWeightActivity;
 import com.example.smartKitchen.R;
+import com.example.smartKitchen.ShapingActivity;
 
 public class DashboardFragment extends Fragment {
 
@@ -20,14 +21,31 @@ public class DashboardFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        ConstraintLayout lose_weight = root.findViewById(R.id.lose_weight);
+        ConstraintLayout shaping = root.findViewById(R.id.shaping);
+        ConstraintLayout gain_muscle = root.findViewById(R.id.gain_muscle);
+
+        lose_weight.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoseWeightActivity.class);
             }
         });
+        shaping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ShapingActivity.class);
+            }
+        });
+        gain_muscle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), GainMuscleActivity.class);
+            }
+        });
+
         return root;
     }
 }
