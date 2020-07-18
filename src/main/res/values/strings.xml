@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">smartKitchen</string>
+    <string name="app_name">厨家</string>
     <string name="title_home">设备</string>
     <string name="title_dashboard">吃什么</string>
     <string name="title_notifications">我的</string>
