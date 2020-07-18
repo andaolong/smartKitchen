@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/smart"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -29,8 +29,8 @@
 
             <com.shehuan.niv.NiceImageView
                 android:id="@+id/img1"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
                 android:src="@drawable/image_smart"
                 app:border_width="4dp"
                 app:is_circle="false"
@@ -57,7 +57,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/lose_weight"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -70,8 +70,8 @@
 
             <com.shehuan.niv.NiceImageView
                 android:id="@+id/img2"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
                 android:src="@drawable/image_lose_weight"
                 app:border_width="4dp"
                 app:is_circle="false"
@@ -98,7 +98,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/gain_muscle"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -110,8 +110,8 @@
 
             <com.shehuan.niv.NiceImageView
                 android:id="@+id/img3"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
                 android:src="@drawable/image_gain_muscle"
                 app:border_width="4dp"
                 app:is_circle="false"
@@ -138,7 +138,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/shaping"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -150,8 +150,8 @@
 
             <com.shehuan.niv.NiceImageView
                 android:id="@+id/img4"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
                 android:src="@drawable/image_shaping"
                 app:border_width="4dp"
                 app:is_circle="false"
