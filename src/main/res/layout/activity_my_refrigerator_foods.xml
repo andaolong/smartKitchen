@@ -4,6 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".myRefrigeratorFoods">
+    tools:context=".myRefrigeratorFoods"
+    android:background="@drawable/bg02">
+
+    <TextView
+        android:id="@+id/currentTemperatureTV"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_margin="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_corners_food"
+        android:gravity="center_horizontal|fill_vertical"
+        android:text="智能冰箱当前温度:"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AllFood"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/currentTemperatureTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/round_corners_food"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/AllFoodTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="冰箱内的所有食物:"
+            android:textColor="#111111"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/line001"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#777777"
+            app:layout_constraintTop_toBottomOf="@id/AllFoodTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/AllFoodContent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/cardview_shadow_start_color"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line001" />
+        <!--        <RelativeLayout-->
+<!--            android:id="@+id/AllFoodRelativeLayout"-->
+<!--            android:layout_width="280dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/AllFood"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            ></RelativeLayout>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainFood"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/AllFood"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/round_corners_food"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/MainFoodTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="冰箱内的主食:"
+            android:textSize="24dp"
+            android:textColor="#111111"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/line002"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#777777"
+            app:layout_constraintTop_toBottomOf="@id/MainFoodTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:id="@+id/MainFoodContent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line002"
+            android:padding="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
