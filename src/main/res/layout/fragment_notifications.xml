@@ -4,22 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/text_notifications"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="8dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:layout_marginEnd="8dp"-->
-    <!--        android:textAlignment="center"-->
-    <!--        android:textSize="20sp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        android:gravity="center_horizontal" />-->
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@color/cardview_light_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topUserInfo"
@@ -30,17 +16,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteY="120dp">
+        tools:layout_editor_absoluteY="120dp"
+        android:background="@android:color/transparent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/userAvatarImg"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:src="@drawable/avatarimg"
-            app:layout_constraintCircleRadius="@android:dimen/app_icon_size"
+            android:src="@drawable/image_head"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/userName"
@@ -62,82 +51,106 @@
         android:id="@+id/navigationLabels"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/myInformationLabel"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:background="#EEEEEE"
-            android:gravity="center|bottom"
-            android:text="我的信息"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/horizontalLine01"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/topUserInfo">
 
         <TextView
             android:id="@+id/horizontalLine01"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="#898989"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/myInformationLabel" />
+            />
 
         <Button
-            android:id="@+id/feedbackLabel"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:background="#EEEEEE"
-            android:gravity="center_horizontal|bottom"
-            android:lineHeight="60dp"
-            android:text="反馈不足"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toTopOf="@id/horizontalLine02"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalLine01" />
+            android:id="@+id/bt_info"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="2dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="35dp"
+            android:text="我的信息"
+            android:textSize="20dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/horizontalLine01" />
 
         <TextView
             android:id="@+id/horizontalLine02"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="#898989"
+            app:layout_constraintBottom_toTopOf="@id/bt_report"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/feedbackLabel" />
+            />
 
         <Button
-            android:id="@+id/aboutUsLabel"
-            android:layout_width="300dp"
+            android:id="@+id/bt_report"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#EEEEEE"
-            android:gravity="center|bottom"
-            android:lineHeight="50dp"
-            android:text="关于我们"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalLine02" />
+            android:layout_marginTop="2dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="35dp"
+            android:text="反馈不足"
+            android:textSize="20dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_info" />
 
         <TextView
             android:id="@+id/horizontalLine03"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
             android:background="#898989"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_report"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/aboutUsLabel" />
+            />
+
+        <Button
+            android:id="@+id/bt_about"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="35dp"
+            android:layout_marginTop="2dp"
+            android:text="关于我们"
+            android:textSize="20dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_report" />
+
+        <TextView
+            android:id="@+id/horizontalLine04"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#898989"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_about"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

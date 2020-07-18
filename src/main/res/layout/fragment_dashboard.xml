@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
+    android:background="@color/cardview_light_background"
     tools:context=".ui.dashboard.DashboardFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lose_weight"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -19,6 +19,7 @@
         android:layout_marginRight="16dp"
         android:background="@drawable/round_corners"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,6 +30,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
             android:text="减脂"
+            android:textColor="@android:color/white"
             android:textSize="25dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +39,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shaping"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -56,6 +58,7 @@
             android:layout_marginTop="15dp"
             android:text="塑形"
             android:textSize="25dp"
+            android:textColor="@android:color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -63,7 +66,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/gain_muscle"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -82,6 +85,7 @@
             android:layout_marginTop="15dp"
             android:text="增肌"
             android:textSize="25dp"
+            android:textColor="@android:color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -89,7 +93,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/smart"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -107,6 +111,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
             android:text="智能推荐"
+            android:textColor="@android:color/white"
             android:textSize="25dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

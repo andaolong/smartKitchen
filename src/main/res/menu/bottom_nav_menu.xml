@@ -4,16 +4,16 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/icon_mydevice_unselected"
-        android:title="厨房" />
+        android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/icon_recipe_unselected"
-        android:title="吃什么" />
+        android:title="@string/title_dashboard" />
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/icon_my_unselected"
-        android:title="我的" />
+        android:title="@string/title_notifications" />
 
 </menu>

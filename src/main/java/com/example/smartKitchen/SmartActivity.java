@@ -3,6 +3,8 @@ package com.example.smartKitchen;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -20,6 +22,9 @@ public class SmartActivity extends AppCompatActivity {
         ConstraintLayout food1 = findViewById(R.id.food1);
         ConstraintLayout food2 = findViewById(R.id.food2);
         ConstraintLayout food3 = findViewById(R.id.food3);
+        //得到shared preference
+        SharedPreferences sp = SmartActivity.this.getSharedPreferences("user", Context.MODE_PRIVATE);
+        float bmi = sp.getFloat("BMI",0);
         //实例化一个DeviceController类然后调用它的方法获取设备影子
         DeviceController deviceController = new DeviceController("08f56a11b38025802f99c01e5292c354", "5f056b6969c46102cb1986e0_20200714");
         deviceController.getShadow();
@@ -29,8 +34,9 @@ public class SmartActivity extends AppCompatActivity {
             allFood = DeviceController.b.getString("AllFood");
         }
         //用完重置，避免获取到过期值
-        DeviceController.b.clear();
+        DeviceController.b_clear();
         tv_food.setText(allFood);
+        tv_bmi.setText(String.valueOf(bmi));
 
     }
 }

@@ -24,7 +24,7 @@ public class myRefrigeratorFoods extends AppCompatActivity {
             httpInfo = DeviceController.b.getString("httpInfo");
         }
         //用完重置，避免获取到过期值
-        DeviceController.b.clear();
+        DeviceController.b_clear();
         System.out.println("httpInfo:" + httpInfo);
 
     }

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">smartKitchen</string>
-    <string name="title_home">我的设备</string>
-    <string name="title_dashboard">菜谱推荐</string>
+    <string name="title_home">设备</string>
+    <string name="title_dashboard">吃什么</string>
     <string name="title_notifications">我的</string>
-    <string name="string_myRefrigerator">我的冰箱</string>
-    <string name="string_myPot">我的锅子</string>
+    <string name="string_myRefrigerator">智能冰箱</string>
+    <string name="string_myPot">智能炸锅</string>
     <string name="todo">TODO</string>
 </resources>

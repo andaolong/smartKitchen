@@ -68,6 +68,10 @@ public class DeviceController {
         httpClient.doPost(url, content);
     }
 
+    public static void b_clear(){
+        b = new Bundle();
+    }
+
     @SuppressLint("HandlerLeak")
     public static Handler handler = new Handler() {
         @Override
