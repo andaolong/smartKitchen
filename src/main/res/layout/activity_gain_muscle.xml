@@ -9,136 +9,192 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/cardview_light_background"
         tools:context=".GainMuscleActivity">
+
+        <TextView
+            android:id="@+id/horizontalLine01"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#898989"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/food1"
-            android:layout_width="380dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/image_food1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/horizontalLine01">
+
+            <com.shehuan.niv.NiceImageView
+                android:id="@+id/img1"
+                android:layout_width="325dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_food4"
+                app:border_color="@color/cardview_dark_background"
+                app:border_width="4dp"
+                app:is_circle="false"
+                app:corner_radius="10dp"
+                app:is_cover_src="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_food1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/round_corners_white"
                 android:text="food1"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="@id/img1"
+                app:layout_constraintTop_toTopOf="@id/img1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/food2"
-            android:layout_width="380dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/image_food2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/food1">
+
+            <com.shehuan.niv.NiceImageView
+                android:id="@+id/img2"
+                android:layout_width="325dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_food2"
+                app:border_color="@color/cardview_dark_background"
+                app:border_width="4dp"
+                app:is_circle="false"
+                app:corner_radius="10dp"
+                app:is_cover_src="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_food2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:text="food2"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/round_corners_white"
+                app:layout_constraintLeft_toLeftOf="@id/img2"
+                app:layout_constraintTop_toTopOf="@id/img2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/food3"
-            android:layout_width="380dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/image_food3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/food2">
+
+            <com.shehuan.niv.NiceImageView
+                android:id="@+id/img3"
+                android:layout_width="325dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_food3"
+                app:border_color="@color/cardview_dark_background"
+                app:border_width="4dp"
+                app:is_circle="false"
+                app:corner_radius="10dp"
+                app:is_cover_src="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_food3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:text="food3"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/round_corners_white"
+                app:layout_constraintLeft_toLeftOf="@id/img3"
+                app:layout_constraintTop_toTopOf="@id/img3" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/food4"
-            android:layout_width="380dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/image_food4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/food3">
+
+            <com.shehuan.niv.NiceImageView
+                android:id="@+id/img4"
+                android:layout_width="325dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_food5"
+                app:border_color="@color/cardview_dark_background"
+                app:border_width="4dp"
+                app:is_circle="false"
+                app:corner_radius="10dp"
+                app:is_cover_src="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_food4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:text="food4"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/food5"
-            android:layout_width="380dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/image_food5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/food4">
-
-            <TextView
-                android:id="@+id/tv_food5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:text="food5"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/round_corners_white"
+                app:layout_constraintLeft_toLeftOf="@id/img4"
+                app:layout_constraintTop_toTopOf="@id/img4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
