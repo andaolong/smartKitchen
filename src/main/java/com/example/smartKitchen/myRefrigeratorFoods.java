@@ -122,7 +122,7 @@ public class myRefrigeratorFoods extends AppCompatActivity {
                     deviceController.getShadow();
                     Temperature[0] = DeviceController.b.getString("Temperature");
                     //更新温度
-                    textView.setText(Temperature[0]);
+                    textView.setText(Temperature[0] + "℃");
 
                     //获取当前时间
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss

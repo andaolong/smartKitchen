@@ -16,15 +16,15 @@
         app:layout_constraintRight_toRightOf="parent"
         android:background="@drawable/round_corners_white"
         android:layout_margin="30dp"
-        android:paddingLeft="10dp"
-        >
+        android:paddingLeft="10dp">
+
         <TextView
             android:id="@+id/TemperatureTV"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="冰箱当前温度:"
+            android:text="冰箱实时温度:"
             android:gravity="fill_vertical"
             android:textColor="@android:color/black"
             android:textSize="18dp"
@@ -166,7 +166,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:text="*主要食物用于设置温控策略:"
+        android:text="*主要食物用于设置温控策略"
         android:textSize="16dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@id/MainFood"

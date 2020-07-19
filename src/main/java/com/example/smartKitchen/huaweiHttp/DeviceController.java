@@ -21,7 +21,7 @@ public class DeviceController {
     public static int opt;
     final public static int GET_SHADOW = 0;
     final public static int ISSUE_COMMAND = 1;
-    public static Bundle b= new Bundle();
+    public static Bundle b = new Bundle();
 
     public DeviceController(String project_id, String device_id) {
         super();
@@ -67,7 +67,7 @@ public class DeviceController {
         httpClient.doPost(url, content);
     }
 
-    public static void b_clear(){
+    public static void b_clear() {
         b = new Bundle();
     }
 
@@ -113,18 +113,25 @@ public class DeviceController {
 //                            System.out.println("第四层的AllFood:" + AllFood);
 //                            System.out.println("第四层的MainFood:" + MainFood);
                             System.out.println("DeviceController解析完成,put信息到bundle中完成");
-                            b.putString("httpInfo",json_str);
-                            b.putString("service_id",service_id);
-                            b.putString("Temperature",Temperature);
-                            b.putString("AllFood",AllFood);
-                            b.putString("MainFood",MainFood);
+                            b.putString("httpInfo", json_str);
+                            b.putString("service_id", service_id);
+                            b.putString("Temperature", Temperature);
+                            b.putString("AllFood", AllFood);
+                            b.putString("MainFood", MainFood);
                         }
-                        break;
-//                        case ISSUE_COMMAND:
-//                            break;
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+                    break;
+                case ISSUE_COMMAND:
+                    try {
+                        String json_str = msg.obj.toString();
+                        JSONObject jsonObject = new JSONObject(json_str);
+                        //TODO
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    break;
             }
 
         }

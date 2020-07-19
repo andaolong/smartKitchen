@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecipeActivity"
+        android:background="@color/cardview_dark_background">
+
+        <com.shehuan.niv.NiceImageView
+            android:id="@+id/img2"
+            android:layout_width="325dp"
+            android:layout_height="180dp"
+            android:src="@drawable/image_food2"
+            app:border_color="@color/cardview_light_background"
+            app:border_width="4dp"
+            app:is_circle="false"
+            app:corner_radius="10dp"
+            app:is_cover_src="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_food2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="水煮牛肉"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/round_corners_white"
+            app:layout_constraintLeft_toLeftOf="@id/img2"
+            app:layout_constraintTop_toTopOf="@id/img2"
+            android:padding="5dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/round_corners_white"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img2">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="食材:"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/line001"
+                android:layout_width="300dp"
+                android:layout_height="1px"
+                android:background="#777777"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="牛肉\n黄豆芽\n生菜\n鸡蛋\n辣椒\n豆瓣酱\n姜\n生粉\n花椒\n盐"
+
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line001" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="做法:"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv11" />
+
+            <TextView
+                android:id="@+id/line002"
+                android:layout_width="300dp"
+                android:layout_height="1px"
+                android:background="#777777"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="1.豆芽烫过，滤水备用\n
+2.牛肉加入蛋清，盐，黑胡椒，生粉腌制\n
+3.热锅，加油放入葱姜蒜炒香\n
+4.加入干辣椒\n
+5.放入豆瓣酱\n
+6.注水\n
+7.豆芽装盆里\n
+8.豆芽上放生菜（其它青菜也行，不过其它青菜放之前和豆芽一样先烫过）\n
+9.下肉\n
+10.把炒锅里的肉汤倒入放有菜的盆里\n
+11.上面加入，葱段，小米椒，蒜蓉，花椒粒\n
+12.淋上热油\n
+12.水煮牛肉完成.（不是很辣）"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line002" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

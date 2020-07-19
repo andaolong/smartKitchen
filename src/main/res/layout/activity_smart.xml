@@ -33,7 +33,7 @@
             android:background="@android:color/transparent"
             android:gravity="bottom"
             android:paddingLeft="35dp"
-            android:text="您的BMI："
+            android:text="您的BMI指数："
             android:textColor="@android:color/black"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
             android:background="@android:color/transparent"
             android:textColor="@android:color/black"
             android:gravity="bottom"
-            android:text="20.1"
+            android:text=""
             android:textSize="18dp"
             app:layout_constraintLeft_toRightOf="@+id/bt_bmi"
             app:layout_constraintStart_toEndOf="@+id/bt_bmi"
@@ -64,6 +64,44 @@
             app:layout_constraintTop_toBottomOf="@id/tv_bmi" />
 
         <TextView
+            android:id="@+id/bt_bfr"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom"
+            android:paddingLeft="35dp"
+            android:text="您的体脂率："
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/horizontalLine02" />
+
+        <TextView
+            android:id="@+id/tv_bfr"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:gravity="bottom"
+            android:text=""
+            android:textSize="18dp"
+            app:layout_constraintLeft_toRightOf="@+id/bt_bfr"
+            app:layout_constraintStart_toEndOf="@+id/bt_bfr"
+            app:layout_constraintTop_toTopOf="@id/horizontalLine02" />
+
+        <TextView
+            android:id="@+id/horizontalLine03"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#898989"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bfr"
+            app:layout_constraintRight_toRightOf="@id/tv_bfr"
+            app:layout_constraintTop_toBottomOf="@id/tv_bfr" />
+
+        <TextView
             android:id="@+id/bt_food"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -75,7 +113,7 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/horizontalLine02" />
+            app:layout_constraintTop_toTopOf="@id/horizontalLine03" />
 
         <TextView
             android:id="@+id/tv_food"
@@ -85,14 +123,14 @@
             android:background="@android:color/transparent"
             android:textColor="@android:color/black"
             android:gravity="bottom"
-            android:text="beef,egg,pork"
+            android:text=""
             android:textSize="18dp"
             app:layout_constraintLeft_toRightOf="@+id/bt_food"
             app:layout_constraintStart_toEndOf="@+id/bt_food"
-            app:layout_constraintTop_toTopOf="@id/horizontalLine02" />
+            app:layout_constraintTop_toTopOf="@id/horizontalLine03" />
 
         <TextView
-            android:id="@+id/horizontalLine03"
+            android:id="@+id/horizontalLine04"
             android:layout_width="0dp"
             android:layout_height="2dp"
             android:layout_marginTop="2dp"
@@ -115,7 +153,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/horizontalLine03" />
+            app:layout_constraintTop_toTopOf="@id/horizontalLine04" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/food1"
@@ -135,7 +173,7 @@
                 android:layout_width="325dp"
                 android:layout_height="180dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/image_food4"
+                android:src="@drawable/image_eggplant"
                 app:border_color="@color/cardview_dark_background"
                 app:border_width="4dp"
                 app:is_circle="false"
@@ -154,10 +192,11 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@android:color/black"
                 android:background="@drawable/round_corners_white"
-                android:text="food1"
-                android:textSize="20dp"
+                android:text="香酥茄"
+                android:textSize="18dp"
                 app:layout_constraintLeft_toLeftOf="@id/img1"
-                app:layout_constraintTop_toTopOf="@id/img1" />
+                app:layout_constraintTop_toTopOf="@id/img1"
+                android:padding="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -195,12 +234,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="food2"
-                android:textSize="20dp"
+                android:text="水煮牛肉"
+                android:textSize="18dp"
                 android:textColor="@android:color/black"
                 android:background="@drawable/round_corners_white"
                 app:layout_constraintLeft_toLeftOf="@id/img2"
-                app:layout_constraintTop_toTopOf="@id/img2" />
+                app:layout_constraintTop_toTopOf="@id/img2"
+                android:padding="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -221,7 +261,7 @@
                 android:layout_width="325dp"
                 android:layout_height="180dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/image_food3"
+                android:src="@drawable/image_waffle"
                 app:border_color="@color/cardview_dark_background"
                 app:border_width="4dp"
                 app:is_circle="false"
@@ -238,12 +278,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="food3"
-                android:textSize="20dp"
+                android:text="十分钟华夫饼"
+                android:textSize="18dp"
                 android:textColor="@android:color/black"
                 android:background="@drawable/round_corners_white"
                 app:layout_constraintLeft_toLeftOf="@id/img3"
-                app:layout_constraintTop_toTopOf="@id/img3" />
+                app:layout_constraintTop_toTopOf="@id/img3"
+                android:padding="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
