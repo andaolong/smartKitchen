@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -85,35 +84,35 @@ public class DeviceController {
                     //解析json
                     try {
                         String json_str = msg.obj.toString();
-                        Log.d("handler", json_str);
+//                        Log.d("handler", json_str);
                         JSONObject jsonObject = new JSONObject(json_str);
                         //取出device_id
                         String device_id = jsonObject.getString("device_id");
-                        System.out.println("\n第一层的device_id:" + device_id);
+//                        System.out.println("\n第一层的device_id:" + device_id);
                         //取出整个shadow，现在还是一个json数组
                         JSONArray jsonArrayShadow = jsonObject.getJSONArray("shadow");
-                        System.out.println("\n第一层的shadow:" + jsonArrayShadow);
-                        //从shadow这个json数组中取出service_id,reported数组，我们要的信息在report数组里面
+//                        System.out.println("\n第一层的shadow:" + jsonArrayShadow);
+//                        //从shadow这个json数组中取出service_id,reported数组，我们要的信息在report数组里面
                         for (int i = 0; i < jsonArrayShadow.length(); i++) {
                             //新建一个jsonObject存储json数组中解析出来的json对象
                             JSONObject jsonObject02 = (JSONObject) jsonArrayShadow.get(i);
                             //解析出service_id
                             String service_id = jsonObject02.getString("service_id");
-                            System.out.println("第二层的service_id:" + service_id);
+//                            System.out.println("第二层的service_id:" + service_id);
                             //解析出report
                             JSONObject reportedJson = jsonObject02.getJSONObject("reported");
-                            System.out.println("第二层的reported:" + reportedJson);
+//                            System.out.println("第二层的reported:" + reportedJson);
                             //从report中解析出properties
                             JSONObject propertiesJson = reportedJson.getJSONObject("properties");
-                            System.out.println("第三层的properties:" + propertiesJson);
+//                            System.out.println("第三层的properties:" + propertiesJson);
                             //从properties中解析出温度，食物等我们需要的信息
                             String Temperature = propertiesJson.getString("Temperature");
                             String AllFood = propertiesJson.getString("AllFood");
                             String MainFood = propertiesJson.getString("MainFood");
-                            System.out.println("第四层的Temperature:" + Temperature);
-                            System.out.println("第四层的AllFood:" + AllFood);
-                            System.out.println("第四层的MainFood:" + MainFood);
-                            System.out.println("解析完成");
+//                            System.out.println("第四层的Temperature:" + Temperature);
+//                            System.out.println("第四层的AllFood:" + AllFood);
+//                            System.out.println("第四层的MainFood:" + MainFood);
+                            System.out.println("DeviceController解析完成,put信息到bundle中完成");
                             b.putString("httpInfo",json_str);
                             b.putString("service_id",service_id);
                             b.putString("Temperature",Temperature);
