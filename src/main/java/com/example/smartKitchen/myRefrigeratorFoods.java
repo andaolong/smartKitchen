@@ -1,6 +1,9 @@
 package com.example.smartKitchen;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +41,7 @@ public class myRefrigeratorFoods extends AppCompatActivity {
 
         //根据获取到的值动态生成控件元素
         TextView textView=(TextView)findViewById(R.id.currentTemperatureTV);
-        textView.setText("冰箱当前温度为：   "+Temperature+"℃");
+        textView.setText(Temperature+"℃");
 
         //添加元素
         ConstraintLayout allFood=(ConstraintLayout) findViewById(R.id.AllFood);
@@ -50,6 +53,14 @@ public class myRefrigeratorFoods extends AppCompatActivity {
         TextView mainFoodTitle = (TextView) findViewById(R.id.MainFoodTitle);
         TextView allFoodContent = (TextView) findViewById(R.id.AllFoodContent);
         TextView mainFoodContent = (TextView) findViewById(R.id.MainFoodContent);
+        Button commands = findViewById(R.id.bt);
+        commands.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(myRefrigeratorFoods.this,CommandsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //拆分字符串
         String[] allFoodArray=AllFood.split(",");
@@ -83,9 +94,6 @@ public class myRefrigeratorFoods extends AppCompatActivity {
 //            System.out.println("1111");
           //  allFoodRelativeLayout.addView(viewItem);
 //        }
-
-
-
 
     }
 }
